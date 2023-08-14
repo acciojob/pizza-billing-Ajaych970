@@ -20,15 +20,17 @@ public class Pizza {
         this.isVeg = isVeg;
         // your code goes here
         if(this.isVeg==true){
-            this.basePrice=300;
+            this.price=300;
             this.extraToppingsPrice=70;
+            this.basePrice=300;
         }else {
             this.basePrice=400;
             this.extraToppingsPrice=120;
+            this.price=400;
         }
         this.extraCheesePrice=80;
         this.paperbagPrice=20;
-        this.price=this.basePrice;
+        //this.price=this.basePrice;
 
     }
 
@@ -76,7 +78,9 @@ public class Pizza {
                 this.bill +="Paperbag Added: "+this.paperbagPrice+"\n";
             }
             this.bill +="Total Price: "+this.price;
+            this.isBillGenerated=true;
         }
         return this.bill;
+
     }
 }
